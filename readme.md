@@ -37,12 +37,13 @@ Mysql :
 	Root passowrd 			: root
 	Root username 			: root
 	command to connect  	: docker-compose exec mysql bash -c "mysql -u root -proot"
+	How to upload dump  	: unzip dump and add extension .sql, and place file in "data\mysql\db" path where we have docker-compose file. place command path till where we have "docker-compose.yml" file. Connect to DB using command: <docker-compose exec mysql bash -c "mysql -u root -proot">, and run "SOURCE /data/mysql/db/SQLFileName.sql"
 
 Mongo :
 	port 					: 27017
 	Root passowrd 			: root
 	Root username 			: root
-	command to connect  	: docker-compose exec mongo bash -c "mongo mongodb://root:root@localhost:27017"
+	command to connect  	: place command path till where we have "docker-compose.yml" file. Run command : <docker-compose exec mongo bash -c "mongo mongodb://root:root@localhost:27017">
 
 RabbitMQ :
 	URL 					: http://localhost:15672
@@ -60,6 +61,10 @@ Couchbase :
 
 Kibana :
 	URL 					: http://localhost:5601
-	Username, password 		: none
+	Username, password 		: no Cred Req by default
+	
+Redis :
+	port 					: 6379
+	command to connect  	: place command path till where we have "docker-compose.yml" file. Run command : <docker-compose exec redis bash -c "redis-cli">
 	
 	
